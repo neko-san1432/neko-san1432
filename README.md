@@ -65,7 +65,8 @@ I am a self-thought programmer who has a high interest in learning and creating 
 
 [![Krupot's GitHub stats](https://github-readme-stats.vercel.app/api?username=neko-san1432&theme=tokyonight)](https://github.com/neko-san1432/github-readme-stats&show_icon=true)
 
-<img alt="github contribution grid snake animation" src="https://github.com/neko-san1432/neko-san1432/raw/output/github-contribution-grid-snake.svg" style="visibility:visible;max-width:100%;">
+![GitHub Snake Animation](https://github.com/neko-san1432/snk/raw/output/github-contribution-grid-snake.svg)
+
 
 ---
 <details>
