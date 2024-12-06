@@ -35,7 +35,7 @@ I am a self-thought programmer who has a high interest in learning and creating 
 
 [![Krupot's GitHub stats](https://github-readme-stats.vercel.app/api?username=neko-san1432&theme=tokyonight)](https://github.com/neko-san1432/github-readme-stats&show_icon=true)
 
-![snake gif](https://github.com/YOUR_USERNAME/YOUR_USERNAME/blob/output/github-snake-dark.svg)
+![snake gif](https://github.com/neko-san1432/neko-san1432/blob/output/github-snake-dark.svg)
 
 
 ---
