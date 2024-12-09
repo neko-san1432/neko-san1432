@@ -3,10 +3,9 @@
 
 ### 🏆Accomplishments:
 <ul style= "circle">
-  <li>Securing account of the Manager's GMail account and found the IP address of the hacker</li>
-  <li>Champion of the debugging contest in 2023 at Cor Jesu College (Team name: Triagram)</li>
+  <li>None for now...  Just stuDYING and developing programming skills rn</li>
 </ul>
-I am a self-thought programmer who has a high interest in learning and creating new technology
+I am a low-profile programmer who has a high interest in learning and creating new technology
 <br/>
 <br/>
 
