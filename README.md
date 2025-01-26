@@ -10,7 +10,7 @@
 <ul style= "circle">
   <li>None for now...  Just stuDYING and developing programming skills rn</li>
 </ul>
-I am a low-profile programmer who has a high interest in learning and creating new technology
+I am a low-profile programmer who have a high interest in learning and creating new technology
 <br/>
 <br/>
 
