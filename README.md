@@ -1,7 +1,7 @@
 <div align = "center">
   
   # 😺Pyrrhus Elcid Go (Neko-san)😺
-  **⚒️Digital Code Blacksmith⚒️**
+  **⚒️Low-Spec Digital Code Blacksmith⚒️**
 
 </div>
 
