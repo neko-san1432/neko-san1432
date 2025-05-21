@@ -29,8 +29,8 @@
 
 <div align ="center">
   
-  [![Krupot's GitHub stats](https://github-readme-stats.vercel.app/api?username=neko-san1432&theme=tokyonight)](https://github.com/neko-san1432/github-readme-stats&show_icon=true)
-  
+  [![Neko san's GitHub stats](https://github-readme-stats.vercel.app/api?username=neko-san1432&theme=tokyonight)](https://github.com/neko-san1432/github-readme-stats&show_icon=true)
+  ![Neko san's Github streak](https://github-readme-streak-stats.herokuapp.com/?user=neko-san1432&theme=tokyonight&hide_border=false)<br/>
   ![snake gif](https://github.com/neko-san1432/neko-san1432/blob/output/github-snake-dark.svg)
 
 </div>
