@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <img src="terminal.svg" width="100%" alt="Neko-San Terminal Dashboard" />
+  <img src="terminal.svg?v=1" width="100%" alt="Neko-San Terminal Dashboard" />
 </div>
 
 ---
