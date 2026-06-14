@@ -121,13 +121,13 @@
         <g class="cat-ascii-frame1">
           <text x="0" y="15">   /\_/\   </text>
           <text x="0" y="32">  (='v'=)  </text>
-          <text x="0" y="49">  (&quot;)_(&quot;)  </text>
+          <text x="0" y="49">  (&quot;)_(&quot;)~  </text>
         </g>
         <!-- Frame 2: Blinking -->
         <g class="cat-ascii-frame2">
           <text x="0" y="15">   /\_/\   </text>
           <text x="0" y="32">  (=-=-=)  </text>
-          <text x="0" y="49">  (&quot;)_(&quot;)  </text>
+          <text x="0" y="49">  (&quot;)_(&quot;)/  </text>
         </g>
       </g>
 
@@ -136,7 +136,7 @@
         <text x="0" y="15" class="text-label">OS: <tspan class="text-info" font-weight="normal">NekoOS v1.4.32</tspan></text>
         <text x="0" y="35" class="text-label">KERNEL: <tspan class="text-info" font-weight="normal">TypeScript / Node.js</tspan></text>
         <text x="0" y="55" class="text-label">UPTIME: <tspan class="text-info" font-weight="normal">Active 24/7 (Actions)</tspan></text>
-        <text x="0" y="75" class="text-label">LAST SYNC: <tspan class="text-info" font-weight="normal">Jun 14, 2026 21:44 UTC</tspan></text>
+        <text x="0" y="75" class="text-label">LAST SYNC: <tspan class="text-info" font-weight="normal">Jun 14, 2026 21:48 UTC</tspan></text>
       </g>
     </g>
 

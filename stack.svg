@@ -11,8 +11,8 @@
     </filter>
   </defs>
 
-  <style>
-    <![CDATA[
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     .grid-border {
       fill: #1a1b26;
       stroke: #3b4261;
@@ -26,31 +26,77 @@
     }
 
     .label-title {
-      font-family: 'Courier New', monospace;
-      font-size: 14px;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 12px;
       fill: #ff007f;
       font-weight: bold;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
     }
 
     .tech-label {
-      font-family: 'Courier New', monospace;
-      font-size: 11px;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 8px;
       fill: #c0caf5;
       font-weight: bold;
       text-anchor: middle;
     }
 
     .tech-class {
-      font-family: 'Courier New', monospace;
-      font-size: 9px;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 6px;
       fill: #7aa2f7;
       text-anchor: middle;
     }
 
-    /* Static layout overrides (no animation) */
+    /* Static layout overrides (no bobbing animation) */
     .bob-0, .bob-1, .bob-2, .bob-3, .bob-4 {
       transform: translateY(48px);
+    }
+
+    /* 8-Bit Icon Animations */
+    @keyframes steam-rise {
+      0%, 100% { transform: translateY(0); opacity: 0.3; }
+      50% { transform: translateY(-2px); opacity: 1; }
+    }
+    .java-steam-1 {
+      animation: steam-rise 1.4s steps(3) infinite;
+    }
+    .java-steam-2 {
+      animation: steam-rise 1.4s steps(3) infinite;
+      animation-delay: 0.7s;
+    }
+
+    @keyframes tongue-flicker {
+      0%, 80%, 100% { opacity: 0; }
+      40%, 60% { opacity: 1; }
+    }
+    .python-tongue {
+      animation: tongue-flicker 2.5s steps(1) infinite;
+    }
+
+    @keyframes js-glow {
+      0%, 100% { fill: #1a1b26; }
+      50% { fill: #e0af68; }
+    }
+    .js-text {
+      animation: js-glow 3s steps(1) infinite;
+    }
+
+    @keyframes cpp-flash {
+      0%, 100% { fill: #00f0ff; }
+      50% { fill: #ff007f; }
+    }
+    .cpp-plus {
+      animation: cpp-flash 1.2s steps(1) infinite;
+    }
+
+    @keyframes gopher-look {
+      0%, 60%, 100% { transform: translateX(0); }
+      20%, 40% { transform: translateX(-1px); }
+      70%, 90% { transform: translateX(1px); }
+    }
+    .gopher-pupil {
+      animation: gopher-look 5s steps(1) infinite;
     }
     ]]>
   </style>
@@ -70,8 +116,8 @@
       <!-- 8-Bit Coffee Cup Icon (Java) -->
       <g transform="translate(-15, 5) scale(2)" shape-rendering="crispEdges">
         <!-- Steam -->
-        <rect x="5" y="0" width="1" height="2" fill="#ff9e64" />
-        <rect x="9" y="0" width="1" height="2" fill="#ff9e64" />
+        <rect x="5" y="0" width="1" height="2" fill="#ff9e64" class="java-steam-1" />
+        <rect x="9" y="0" width="1" height="2" fill="#ff9e64" class="java-steam-2" />
         <!-- Cup -->
         <rect x="3" y="3" width="9" height="6" fill="#f75c7f" />
         <rect x="2" y="3" width="1" height="5" fill="#f75c7f" />
@@ -95,6 +141,8 @@
         <!-- Blue Snake -->
         <rect x="2" y="1" width="6" height="3" fill="#7aa2f7" />
         <rect x="5" y="4" width="6" height="3" fill="#7aa2f7" />
+        <!-- Tongue -->
+        <rect x="1" y="3" width="1" height="1" fill="#ff007f" class="python-tongue" />
         <!-- Yellow Snake -->
         <rect x="7" y="5" width="6" height="3" fill="#e0af68" />
         <rect x="4" y="2" width="6" height="3" fill="#e0af68" />
@@ -116,14 +164,14 @@
         <!-- Background box -->
         <rect x="1" y="1" width="13" height="10" fill="#e0af68" />
         <!-- J -->
-        <rect x="4" y="7" width="3" height="1" fill="#1a1b26" />
-        <rect x="6" y="4" width="1" height="3" fill="#1a1b26" />
+        <rect x="4" y="7" width="3" height="1" fill="#1a1b26" class="js-text" />
+        <rect x="6" y="4" width="1" height="3" fill="#1a1b26" class="js-text" />
         <!-- S -->
-        <rect x="8" y="4" width="3" height="1" fill="#1a1b26" />
-        <rect x="8" y="5" width="1" height="1" fill="#1a1b26" />
-        <rect x="9" y="6" width="2" height="1" fill="#1a1b26" />
-        <rect x="10" y="7" width="1" height="1" fill="#1a1b26" />
-        <rect x="8" y="8" width="3" height="1" fill="#1a1b26" />
+        <rect x="8" y="4" width="3" height="1" fill="#1a1b26" class="js-text" />
+        <rect x="8" y="5" width="1" height="1" fill="#1a1b26" class="js-text" />
+        <rect x="9" y="6" width="2" height="1" fill="#1a1b26" class="js-text" />
+        <rect x="10" y="7" width="1" height="1" fill="#1a1b26" class="js-text" />
+        <rect x="8" y="8" width="3" height="1" fill="#1a1b26" class="js-text" />
       </g>
       <text x="0" y="85" class="tech-label">JS / TS</text>
       <text x="0" y="95" class="tech-class">FRONTEND</text>
@@ -144,8 +192,8 @@
         <!-- Inner C -->
         <rect x="4" y="4" width="2" height="3" fill="#fafafa" />
         <!-- Plus signs -->
-        <rect x="8" y="5" width="3" height="1" fill="#00f0ff" />
-        <rect x="9" y="4" width="1" height="3" fill="#00f0ff" />
+        <rect x="8" y="5" width="3" height="1" fill="#00f0ff" class="cpp-plus" />
+        <rect x="9" y="4" width="1" height="3" fill="#00f0ff" class="cpp-plus" />
       </g>
       <text x="0" y="85" class="tech-label">C / C++</text>
       <text x="0" y="95" class="tech-class">HARDWARE</text>
@@ -165,8 +213,8 @@
         <!-- Eyes (goggles style) -->
         <rect x="3" y="3" width="3" height="3" fill="#fafafa" />
         <rect x="9" y="3" width="3" height="3" fill="#fafafa" />
-        <rect x="4" y="4" width="1" height="1" fill="#1a1b26" />
-        <rect x="10" y="4" width="1" height="1" fill="#1a1b26" />
+        <rect x="4" y="4" width="1" height="1" fill="#1a1b26" class="gopher-pupil" />
+        <rect x="10" y="4" width="1" height="1" fill="#1a1b26" class="gopher-pupil" />
         <!-- Nose -->
         <rect x="7" y="6" width="1" height="1" fill="#ff9e64" />
         <!-- Teeth -->

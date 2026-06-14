@@ -121,13 +121,13 @@
         <g class="cat-ascii-frame1">
           <text x="0" y="15">   /\_/\   </text>
           <text x="0" y="32">  (='v'=)  </text>
-          <text x="0" y="49">  (&quot;)_(&quot;)  </text>
+          <text x="0" y="49">  (&quot;)_(&quot;)~  </text>
         </g>
         <!-- Frame 2: Blinking -->
         <g class="cat-ascii-frame2">
           <text x="0" y="15">   /\_/\   </text>
           <text x="0" y="32">  (=-=-=)  </text>
-          <text x="0" y="49">  (&quot;)_(&quot;)  </text>
+          <text x="0" y="49">  (&quot;)_(&quot;)/  </text>
         </g>
       </g>
 
