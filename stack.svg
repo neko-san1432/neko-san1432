@@ -88,6 +88,14 @@
       animation-delay: 1.5s;
     }
 
+    @keyframes kotlin-pulse {
+      0%, 100% { filter: brightness(1); }
+      50% { filter: brightness(1.25); }
+    }
+    .kotlin-logo {
+      animation: kotlin-pulse 2s steps(2) infinite;
+    }
+
     @keyframes cpp-flash {
       0%, 100% { fill: #00f0ff; }
       50% { fill: #ff007f; }
@@ -102,6 +110,14 @@
     }
     .csharp-hash {
       animation: csharp-glow 1.5s steps(1) infinite;
+    }
+
+    @keyframes swift-hover {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-1px); }
+    }
+    .swift-bird {
+      animation: swift-hover 1.2s steps(2) infinite;
     }
 
     @keyframes gopher-look {
@@ -123,8 +139,8 @@
 
   <!-- ================= ROW 1 (Y centers = 95) ================= -->
   
-  <!-- Java (Slot 1: X=130) -->
-  <g transform="translate(130, 95)">
+  <!-- Java (Slot 1: X=120) -->
+  <g transform="translate(120, 95)">
     <rect x="-40" y="-40" width="80" height="80" rx="8" class="slot-border" />
     <g transform="translate(-20, -30) scale(2.8)" shape-rendering="crispEdges">
       <!-- Steam -->
@@ -143,8 +159,8 @@
     <text x="0" y="32" class="tech-class">SYSTEMS</text>
   </g>
 
-  <!-- Python (Slot 2: X=310) -->
-  <g transform="translate(310, 95)">
+  <!-- Python (Slot 2: X=260) -->
+  <g transform="translate(260, 95)">
     <rect x="-40" y="-40" width="80" height="80" rx="8" class="slot-border" />
     <g transform="translate(-20, -30) scale(2.8)" shape-rendering="crispEdges">
       <!-- Blue Snake -->
@@ -163,8 +179,8 @@
     <text x="0" y="32" class="tech-class">SCRIPTING</text>
   </g>
 
-  <!-- JavaScript (Slot 3: X=490) -->
-  <g transform="translate(490, 95)">
+  <!-- JavaScript (Slot 3: X=400) -->
+  <g transform="translate(400, 95)">
     <rect x="-40" y="-40" width="80" height="80" rx="8" class="slot-border" />
     <g transform="translate(-20, -30) scale(2.8)" shape-rendering="crispEdges">
       <!-- Background box -->
@@ -183,8 +199,8 @@
     <text x="0" y="32" class="tech-class">WEB APP</text>
   </g>
 
-  <!-- TypeScript (Slot 4: X=670) -->
-  <g transform="translate(670, 95)">
+  <!-- TypeScript (Slot 4: X=540) -->
+  <g transform="translate(540, 95)">
     <rect x="-40" y="-40" width="80" height="80" rx="8" class="slot-border" />
     <g transform="translate(-20, -30) scale(2.8)" shape-rendering="crispEdges">
       <!-- Background box -->
@@ -203,10 +219,23 @@
     <text x="0" y="32" class="tech-class">FRONTEND</text>
   </g>
 
+  <!-- Kotlin (Slot 5: X=680) -->
+  <g transform="translate(680, 95)">
+    <rect x="-40" y="-40" width="80" height="80" rx="8" class="slot-border" />
+    <g transform="translate(-20, -30) scale(2.8)" class="kotlin-logo" shape-rendering="crispEdges">
+      <!-- Kotlin Diagonal Flag -->
+      <rect x="1" y="1" width="12" height="10" fill="#bd00ff" />
+      <path d="M1,1 H13 L1,11 Z" fill="#ff007f" />
+      <path d="M5,1 H13 V9 Z" fill="#ff9e64" />
+    </g>
+    <text x="0" y="20" class="tech-label">KOTLIN</text>
+    <text x="0" y="32" class="tech-class">ANDROID</text>
+  </g>
+
   <!-- ================= ROW 2 (Y centers = 195) ================= -->
   
-  <!-- C (Slot 5: X=130) -->
-  <g transform="translate(130, 195)">
+  <!-- C (Slot 6: X=120) -->
+  <g transform="translate(120, 195)">
     <rect x="-40" y="-40" width="80" height="80" rx="8" class="slot-border" />
     <g transform="translate(-20, -30) scale(2.8)" shape-rendering="crispEdges">
       <!-- Shield Body -->
@@ -223,8 +252,8 @@
     <text x="0" y="32" class="tech-class">LOW LEVEL</text>
   </g>
 
-  <!-- C++ (Slot 6: X=310) -->
-  <g transform="translate(310, 195)">
+  <!-- C++ (Slot 7: X=260) -->
+  <g transform="translate(260, 195)">
     <rect x="-40" y="-40" width="80" height="80" rx="8" class="slot-border" />
     <g transform="translate(-20, -30) scale(2.8)" shape-rendering="crispEdges">
       <!-- Shield Body -->
@@ -244,8 +273,8 @@
     <text x="0" y="32" class="tech-class">GRAPHICS</text>
   </g>
 
-  <!-- C# (Slot 7: X=490) -->
-  <g transform="translate(490, 195)">
+  <!-- C# (Slot 8: X=400) -->
+  <g transform="translate(400, 195)">
     <rect x="-40" y="-40" width="80" height="80" rx="8" class="slot-border" />
     <g transform="translate(-20, -30) scale(2.8)" shape-rendering="crispEdges">
       <!-- Shield Body -->
@@ -265,8 +294,26 @@
     <text x="0" y="32" class="tech-class">ENGINES</text>
   </g>
 
-  <!-- Go (Slot 8: X=670) -->
-  <g transform="translate(670, 195)">
+  <!-- Swift (Slot 9: X=540) -->
+  <g transform="translate(540, 195)">
+    <rect x="-40" y="-40" width="80" height="80" rx="8" class="slot-border" />
+    <g transform="translate(-20, -30) scale(2.8)" shape-rendering="crispEdges">
+      <!-- Swift Bird -->
+      <rect x="9" y="1" width="3" height="1" fill="#ff9e64" class="swift-bird" />
+      <rect x="7" y="2" width="5" height="1" fill="#ff9e64" class="swift-bird" />
+      <rect x="5" y="3" width="6" height="1" fill="#ff9e64" class="swift-bird" />
+      <rect x="4" y="4" width="6" height="1" fill="#ff9e64" class="swift-bird" />
+      <rect x="2" y="5" width="7" height="1" fill="#ff9e64" class="swift-bird" />
+      <rect x="1" y="6" width="6" height="1" fill="#ff9e64" class="swift-bird" />
+      <rect x="1" y="7" width="6" height="1" fill="#ff9e64" class="swift-bird" />
+      <rect x="1" y="8" width="3" height="1" fill="#ff9e64" class="swift-bird" />
+    </g>
+    <text x="0" y="20" class="tech-label">SWIFT</text>
+    <text x="0" y="32" class="tech-class">IOS / OSX</text>
+  </g>
+
+  <!-- Go (Slot 10: X=680) -->
+  <g transform="translate(680, 195)">
     <rect x="-40" y="-40" width="80" height="80" rx="8" class="slot-border" />
     <g transform="translate(-20, -30) scale(2.8)" shape-rendering="crispEdges">
       <!-- Head -->
