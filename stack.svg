@@ -48,17 +48,10 @@
       text-anchor: middle;
     }
 
-    /* Staggered bobbing for items */
-    @keyframes item-bob {
-      0%, 100% { transform: translateY(48px); }
-      50% { transform: translateY(42px); }
+    /* Static layout overrides (no animation) */
+    .bob-0, .bob-1, .bob-2, .bob-3, .bob-4 {
+      transform: translateY(48px);
     }
-
-    .bob-0 { animation: item-bob 2.0s ease-in-out infinite; }
-    .bob-1 { animation: item-bob 2.0s ease-in-out infinite; animation-delay: 0.2s; }
-    .bob-2 { animation: item-bob 2.0s ease-in-out infinite; animation-delay: 0.4s; }
-    .bob-3 { animation: item-bob 2.0s ease-in-out infinite; animation-delay: 0.6s; }
-    .bob-4 { animation: item-bob 2.0s ease-in-out infinite; animation-delay: 0.8s; }
     ]]>
   </style>
 
