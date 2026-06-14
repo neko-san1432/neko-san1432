@@ -16,6 +16,7 @@
   </defs>
 
   <style>
+    <![CDATA[
     /* CSS Styles & Animations */
     .banner-text {
       font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Outfit', 'Inter', Roboto, sans-serif;
@@ -101,6 +102,7 @@
       transform-origin: center;
       animation: idle-blink 4s infinite;
     }
+    ]]>
   </style>
 
   <!-- ================= BACKGROUND / BASELINE ================= -->

@@ -1,0 +1,27 @@
+{
+  "name": "nekosan",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">\r   <img src=\"header.svg\" width=\"100%\" alt=\"Neko-San Banner\" />\r </div>",
+  "main": "index.js",
+  "scripts": {
+    "update-readme": "tsx src/update-readme.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neko-san1432/neko-san1432.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/neko-san1432/neko-san1432/issues"
+  },
+  "homepage": "https://github.com/neko-san1432/neko-san1432#readme",
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}
