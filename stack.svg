@@ -29,7 +29,7 @@
 
     .label-title {
       font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
-      font-size: 14px;
+      font-size: 18px;
       fill: #ff007f;
       font-weight: bold;
       letter-spacing: 2px;
@@ -37,7 +37,7 @@
 
     .tech-label {
       font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
-      font-size: 8px;
+      font-size: 10px;
       fill: #c0caf5;
       font-weight: bold;
       text-anchor: middle;
@@ -45,7 +45,7 @@
 
     .tech-class {
       font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
-      font-size: 6px;
+      font-size: 7px;
       fill: #7aa2f7;
       text-anchor: middle;
     }
@@ -135,7 +135,7 @@
   <rect x="10" y="10" width="780" height="260" rx="8" class="grid-border" />
 
   <!-- Header Title -->
-  <text x="400" y="35" text-anchor="middle" class="label-title" filter="url(#neon-glow-pink)">BLACKSMITH'S ARSENAL</text>
+  <text x="400" y="35" text-anchor="middle" class="label-title" filter="url(#neon-glow-pink)">TECH STACK</text>
 
   <!-- ================= ROW 1 (Y centers = 95) ================= -->
   
