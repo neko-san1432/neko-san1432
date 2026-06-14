@@ -40,14 +40,14 @@
     /* 8-bit walking translations (discrete pixel steps) */
     @keyframes walk-in-left {
       0% { transform: translate(-60px, 122px); }
-      70% { transform: translate(230px, 122px); }
-      100% { transform: translate(230px, 122px); }
+      70% { transform: translate(235px, 122px); }
+      100% { transform: translate(235px, 122px); }
     }
 
     @keyframes walk-in-right {
       0% { transform: translate(810px, 122px); }
-      70% { transform: translate(525px, 122px); }
-      100% { transform: translate(525px, 122px); }
+      70% { transform: translate(528px, 122px); }
+      100% { transform: translate(528px, 122px); }
     }
 
     /* Wobble walking animation (discrete 8-bit steps) */
@@ -100,31 +100,28 @@
   <!-- ================= MOVING NEON GROUND LINE ================= -->
   <line x1="-50" y1="165" x2="850" y2="165" class="ground-line" />
 
-  <!-- ================= 8-BIT TEXT WAVE (NEKO-SAN) ================= -->
+  <!-- ================= 8-BIT TEXT WAVE (PYRRHUS) ================= -->
   <g transform="translate(0, 85)" shape-rendering="crispEdges">
-    <!-- N (X = 265) -->
-    <path class="pixel-letter" style="animation-delay: 0.0s;" d="M265,0 h5 v35 h-5 z M270,5 h5 v5 h-5 z M275,10 h5 v5 h-5 z M280,15 h5 v5 h-5 z M285,0 h5 v35 h-5 z" />
+    <!-- P (X = 276) -->
+    <path class="pixel-letter" style="animation-delay: 0.0s;" d="M276,0 h20 v5 h-20 z M276,5 h5 v30 h-5 z M296,5 h5 v10 h-5 z M281,15 h15 v5 h-15 z" />
     
-    <!-- E (X = 300) -->
-    <path class="pixel-letter" style="animation-delay: 0.15s;" d="M300,0 h25 v5 h-25 z M300,5 h5 v25 h-5 z M300,15 h20 v5 h-20 z M300,30 h25 v5 h-25 z" />
+    <!-- Y (X = 313) -->
+    <path class="pixel-letter" style="animation-delay: 0.15s;" d="M313,0 h5 v10 h-5 z M333,0 h5 v10 h-5 z M318,10 h5 v5 h-5 z M328,10 h5 v5 h-5 z M323,15 h5 v20 h-5 z" />
     
-    <!-- K (X = 335) -->
-    <path class="pixel-letter" style="animation-delay: 0.3s;" d="M335,0 h5 v35 h-5 z M355,0 h5 v10 h-5 z M350,10 h5 v5 h-5 z M345,15 h5 v5 h-5 z M340,20 h5 v5 h-5 z M345,25 h5 v5 h-5 z M350,30 h10 v5 h-10 z" />
+    <!-- R (X = 350) -->
+    <path class="pixel-letter" style="animation-delay: 0.3s;" d="M350,0 h20 v5 h-20 z M350,5 h5 v30 h-5 z M370,5 h5 v10 h-5 z M355,15 h15 v5 h-15 z M360,20 h5 v5 h-5 z M365,25 h5 v5 h-5 z M370,30 h5 v5 h-5 z" />
     
-    <!-- O (X = 370) -->
-    <path class="pixel-letter" style="animation-delay: 0.45s;" d="M375,0 h15 v5 h-15 z M370,5 h5 v25 h-5 z M390,5 h5 v25 h-5 z M375,30 h15 v5 h-15 z" />
+    <!-- R (X = 387) -->
+    <path class="pixel-letter" style="animation-delay: 0.45s;" d="M387,0 h20 v5 h-20 z M387,5 h5 v30 h-5 z M407,5 h5 v10 h-5 z M392,15 h15 v5 h-15 z M397,20 h5 v5 h-5 z M402,25 h5 v5 h-5 z M407,30 h5 v5 h-5 z" />
     
-    <!-- - (X = 405) -->
-    <path class="pixel-letter" style="animation-delay: 0.6s;" d="M405,15 h25 v5 h-25 z" />
+    <!-- H (X = 424) -->
+    <path class="pixel-letter" style="animation-delay: 0.6s;" d="M424,0 h5 v35 h-5 z M444,0 h5 v35 h-5 z M429,15 h15 v5 h-15 z" />
     
-    <!-- S (X = 440) -->
-    <path class="pixel-letter" style="animation-delay: 0.75s;" d="M445,0 h20 v5 h-20 z M440,5 h5 v10 h-5 z M445,15 h15 v5 h-15 z M460,20 h5 v10 h-5 z M440,30 h20 v5 h-20 z" />
+    <!-- U (X = 461) -->
+    <path class="pixel-letter" style="animation-delay: 0.75s;" d="M461,0 h5 v30 h-5 z M481,0 h5 v30 h-5 z M466,30 h15 v5 h-15 z" />
     
-    <!-- A (X = 475) -->
-    <path class="pixel-letter" style="animation-delay: 0.9s;" d="M480,0 h15 v5 h-15 z M475,5 h5 v30 h-5 z M495,5 h5 v30 h-5 z M480,15 h15 v5 h-15 z" />
-    
-    <!-- N (X = 510) -->
-    <path class="pixel-letter" style="animation-delay: 1.05s;" d="M510,0 h5 v35 h-5 z M515,5 h5 v5 h-5 z M520,10 h5 v5 h-5 z M525,15 h5 v5 h-5 z M530,0 h5 v35 h-5 z" />
+    <!-- S (X = 498) -->
+    <path class="pixel-letter" style="animation-delay: 0.9s;" d="M503,0 h20 v5 h-20 z M498,5 h5 v10 h-5 z M503,15 h15 v5 h-15 z M518,20 h5 v10 h-5 z M498,30 h20 v5 h-20 z" />
   </g>
 
   <!-- ================= LEFT CAT (Cyber-Blue Theme) ================= -->
@@ -190,9 +187,9 @@
           <rect x="11" y="2" width="1" height="2" fill="#00f0ff" />
           <rect x="10" y="2" width="1" height="2" fill="#ff007f" />
           <rect x="3" y="4" width="5" height="1" fill="#ff007f" />
-          <rect x="8" y="4" width="3" height="1" fill="#00f0ff" /> <!-- Neon Cyan Spot -->
+          <rect x="8" y="4" width="3" height="1" fill="#00f0ff" />
           <rect x="2" y="5" width="6" height="1" fill="#ff007f" />
-          <rect x="8" y="5" width="4" height="1" fill="#00f0ff" /> <!-- Neon Cyan Spot -->
+          <rect x="8" y="5" width="4" height="1" fill="#00f0ff" />
           <rect x="12" y="5" width="1" height="1" fill="#ff007f" />
           <rect x="2" y="6" width="11" height="1" fill="#ff007f" />
           <!-- Neon Cyan Eyes with Blinking -->
@@ -211,9 +208,9 @@
           <rect x="7" y="7" width="1" height="1" fill="#00f0ff" />
           <!-- Body -->
           <rect x="3" y="8" width="9" height="1" fill="#ff007f" />
-          <rect x="3" y="9" width="2" height="1" fill="#1f2335" /> <!-- Cyber Dark Spot -->
+          <rect x="3" y="9" width="2" height="1" fill="#1f2335" />
           <rect x="5" y="9" width="7" height="1" fill="#ff007f" />
-          <rect x="3" y="10" width="3" height="1" fill="#1f2335" /> <!-- Cyber Dark Spot -->
+          <rect x="3" y="10" width="3" height="1" fill="#1f2335" />
           <rect x="6" y="10" width="6" height="1" fill="#ff007f" />
           <rect x="3" y="11" width="9" height="3" fill="#ff007f" />
           <!-- Paws -->
