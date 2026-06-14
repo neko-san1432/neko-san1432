@@ -121,7 +121,7 @@
         <text x="0" y="55" class="text-label">UPTIME: <tspan class="text-info" font-weight="normal">Active 24/7 (Actions)</tspan></text>
       </g>
       <g class="line-4">
-        <text x="0" y="75" class="text-label">LAST SYNC: <tspan class="text-info" font-weight="normal">Jun 14, 2026 21:25 UTC</tspan></text>
+        <text x="0" y="75" class="text-label">LAST SYNC: <tspan class="text-info" font-weight="normal">Jun 14, 2026 21:36 UTC</tspan></text>
       </g>
     </g>
 
