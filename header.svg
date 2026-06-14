@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="100%" height="220">
+  <defs>
+    <!-- Text gradient -->
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff9e64" />
+      <stop offset="35%" stop-color="#f75c7f" />
+      <stop offset="70%" stop-color="#b4f9f8" />
+      <stop offset="100%" stop-color="#7aa2f7" />
+    </linearGradient>
+
+    <!-- Drop shadow for glow effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    /* CSS Styles & Animations */
+    .banner-text {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Outfit', 'Inter', Roboto, sans-serif;
+      font-weight: 800;
+      fill: url(#text-grad);
+      filter: drop-shadow(0px 0px 8px rgba(247, 92, 127, 0.5));
+      letter-spacing: 3px;
+    }
+
+    .subtitle-text {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif;
+      font-weight: 500;
+      fill: #a9b1d6;
+      font-size: 16px;
+      letter-spacing: 2px;
+      opacity: 0.8;
+    }
+
+    /* Walking translations */
+    @keyframes walk-in-left {
+      0% { transform: translateX(-100px); }
+      70% { transform: translateX(165px); }
+      100% { transform: translateX(165px); }
+    }
+
+    @keyframes walk-in-right {
+      0% { transform: translateX(900px); }
+      70% { transform: translateX(585px); }
+      100% { transform: translateX(585px); }
+    }
+
+    /* Wobble walking animation (stops after 70%) */
+    @keyframes walking-wobble {
+      0%, 10%, 20%, 30%, 40%, 50%, 60% { transform: translateY(0px) rotate(-3deg); }
+      5%, 15%, 25%, 35%, 45%, 55%, 65% { transform: translateY(-8px) rotate(3deg); }
+      70%, 100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    /* Continuous idle animations */
+    @keyframes idle-tail-wag {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(18deg); }
+    }
+
+    @keyframes idle-blink {
+      0%, 90%, 100% { transform: scaleY(1); }
+      95% { transform: scaleY(0.1); }
+    }
+
+    @keyframes idle-breath {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-2px); }
+    }
+
+    /* Animation class assignments */
+    .left-cat-container {
+      animation: walk-in-left 5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+
+    .right-cat-container {
+      animation: walk-in-right 5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+
+    .cat-wobble {
+      animation: walking-wobble 5s ease-in-out forwards;
+    }
+
+    .cat-breath {
+      animation: idle-breath 3s ease-in-out infinite;
+    }
+
+    .tail-left {
+      transform-origin: 10px 40px;
+      animation: idle-tail-wag 1.6s ease-in-out infinite;
+    }
+
+    .tail-right {
+      transform-origin: 40px 40px;
+      animation: idle-tail-wag 1.4s ease-in-out infinite;
+    }
+
+    .eye {
+      transform-origin: center;
+      animation: idle-blink 4s infinite;
+    }
+  </style>
+
+  <!-- ================= BACKGROUND / BASELINE ================= -->
+  <!-- Subtle ground line -->
+  <line x1="50" y1="165" x2="750" y2="165" stroke="#3b4261" stroke-width="2" stroke-dasharray="8 6" opacity="0.4" />
+
+  <!-- ================= MAIN TEXT ================= -->
+  <g transform="translate(0, 10)">
+    <text x="400" y="120" text-anchor="middle" class="banner-text" font-size="52">NEKO-SAN</text>
+    <text x="400" y="150" text-anchor="middle" class="subtitle-text">LOW-SPEC DIGITAL CODE BLACKSMITH</text>
+  </g>
+
+  <!-- ================= LEFT CAT (Grey/Lavender Theme) ================= -->
+  <g class="left-cat-container" transform="translate(0, 115)">
+    <g class="cat-wobble">
+      <g class="cat-breath" style="animation-delay: 0.2s;">
+        <!-- Tail -->
+        <path class="tail-left" d="M 12,40 C 5,42 0,32 5,20 C 8,10 -2,5 2,2 C 7,-1 15,10 12,30" fill="#a9b1d6" />
+        <!-- Body -->
+        <rect x="10" y="18" width="32" height="28" rx="12" fill="#a9b1d6" />
+        <!-- Paws -->
+        <rect x="14" y="44" width="9" height="5" rx="2.5" fill="#c0caf5" />
+        <rect x="29" y="44" width="9" height="5" rx="2.5" fill="#c0caf5" />
+        <!-- Head -->
+        <ellipse cx="26" cy="16" rx="19" ry="15" fill="#a9b1d6" />
+        <!-- Ears -->
+        <polygon points="10,8 6,-8 18,3" fill="#a9b1d6" />
+        <polygon points="12,7 9,-4 17,3" fill="#f75c7f" />
+        <polygon points="42,8 46,-8 34,3" fill="#a9b1d6" />
+        <polygon points="40,7 43,-4 35,3" fill="#f75c7f" />
+        <!-- Eyes -->
+        <ellipse class="eye" cx="19" cy="15" rx="2.5" ry="2.5" fill="#1a1b26" />
+        <ellipse class="eye" cx="33" cy="15" rx="2.5" ry="2.5" fill="#1a1b26" />
+        <!-- Nose/Mouth -->
+        <polygon points="26,18 24.5,16.5 27.5,16.5" fill="#f75c7f" />
+        <path d="M 24,20 Q 26,21 26,20 Q 26,21 28,20" stroke="#1a1b26" stroke-width="1" fill="none" />
+        <!-- Whiskers -->
+        <line x1="9" y1="17" x2="2" y2="16" stroke="#c0caf5" stroke-width="1.5" />
+        <line x1="9" y1="20" x2="1" y2="20" stroke="#c0caf5" stroke-width="1.5" />
+        <line x1="43" y1="17" x2="50" y2="16" stroke="#c0caf5" stroke-width="1.5" />
+        <line x1="43" y1="20" x2="51" y2="20" stroke="#c0caf5" stroke-width="1.5" />
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT CAT (Orange/Calico Theme) ================= -->
+  <!-- Flipped horizontally to face left -->
+  <g class="right-cat-container" transform="translate(0, 115)">
+    <g class="cat-wobble" style="animation-delay: 0.1s;">
+      <g class="cat-breath" style="animation-delay: 0.5s;">
+        <!-- Tail (Mirrored coords logic) -->
+        <path class="tail-right" d="M 38,40 C 45,42 50,32 45,20 C 42,10 52,5 48,2 C 43,-1 35,10 38,30" fill="#ff9e64" />
+        <!-- Body -->
+        <rect x="8" y="18" width="32" height="28" rx="12" fill="#ff9e64" />
+        <!-- Calico spots -->
+        <path d="M 28,18 Q 33,26 40,24 L 40,18 Z" fill="#e0af68" />
+        <path d="M 8,30 Q 15,35 12,46 L 8,46 Z" fill="#414868" />
+        <!-- Paws -->
+        <rect x="12" y="44" width="9" height="5" rx="2.5" fill="#fafafa" />
+        <rect x="27" y="44" width="9" height="5" rx="2.5" fill="#fafafa" />
+        <!-- Head -->
+        <ellipse cx="24" cy="16" rx="19" ry="15" fill="#ff9e64" />
+        <!-- Calico head spot -->
+        <path d="M 28,3 Q 32,10 40,6 Q 38,2 35,2 Z" fill="#414868" />
+        <!-- Ears -->
+        <polygon points="8,8 4,-8 16,3" fill="#ff9e64" />
+        <polygon points="10,7 7,-4 15,3" fill="#f75c7f" />
+        <polygon points="40,8 44,-8 32,3" fill="#ff9e64" />
+        <polygon points="38,7 41,-4 33,3" fill="#f75c7f" />
+        <!-- Eyes -->
+        <ellipse class="eye" cx="17" cy="15" rx="2.5" ry="2.5" fill="#1a1b26" />
+        <ellipse class="eye" cx="31" cy="15" rx="2.5" ry="2.5" fill="#1a1b26" />
+        <!-- Nose/Mouth -->
+        <polygon points="24,18 22.5,16.5 25.5,16.5" fill="#f75c7f" />
+        <path d="M 22,20 Q 24,21 24,20 Q 24,21 26,20" stroke="#1a1b26" stroke-width="1" fill="none" />
+        <!-- Whiskers -->
+        <line x1="7" y1="17" x2="0" y2="16" stroke="#fafafa" stroke-width="1.5" />
+        <line x1="7" y1="20" x2="-1" y2="20" stroke="#fafafa" stroke-width="1.5" />
+        <line x1="41" y1="17" x2="48" y2="16" stroke="#fafafa" stroke-width="1.5" />
+        <line x1="41" y1="20" x2="49" y2="20" stroke="#fafafa" stroke-width="1.5" />
+      </g>
+    </g>
+  </g>
+</svg>
