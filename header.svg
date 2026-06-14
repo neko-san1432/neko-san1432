@@ -11,16 +11,47 @@
   <style>
     <![CDATA[
     /* CSS Styles & Animations */
-    /* 8-bit text jump animation with neon cyber glow */
+    /* 8-bit text glitch animation with neon cyber glow */
     .pixel-letter {
       fill: url(#text-grad);
       filter: drop-shadow(0px 0px 8px rgba(0, 240, 255, 0.8)) drop-shadow(0px 0px 15px rgba(189, 0, 255, 0.5));
-      animation: letter-jump 1.2s steps(2) infinite;
+      animation: letter-glitch 3s steps(1) infinite;
     }
 
-    @keyframes letter-jump {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-6px); }
+    @keyframes letter-glitch {
+      0%, 12%, 18%, 28%, 38%, 68%, 78%, 100% {
+        transform: translate(0, 0) scale(1) skewX(0deg);
+        fill: url(#text-grad);
+        opacity: 1;
+        filter: drop-shadow(0px 0px 8px rgba(0, 240, 255, 0.8)) drop-shadow(0px 0px 15px rgba(189, 0, 255, 0.5));
+      }
+      13% {
+        transform: translate(-3px, 1px) skewX(6deg);
+        fill: #ff007f;
+        opacity: 0.9;
+        filter: drop-shadow(3px 0px 0px #00f0ff) drop-shadow(-3px 0px 0px #ff007f);
+      }
+      14% {
+        transform: translate(3px, -2px) skewX(-6deg);
+        fill: #00f0ff;
+        opacity: 0.8;
+        filter: drop-shadow(-3px 0px 0px #ff007f);
+      }
+      15% {
+        transform: translate(0px, 0px) scaleY(1.1);
+        fill: #fafafa;
+        opacity: 1;
+      }
+      69% {
+        transform: translate(2px, 2px);
+        fill: #bd00ff;
+        filter: drop-shadow(-2px 0px 0px #00f0ff);
+      }
+      70% {
+        transform: translate(-2px, -1px);
+        fill: #00f0ff;
+        opacity: 0.95;
+      }
     }
 
     /* Continuous idle animations */
