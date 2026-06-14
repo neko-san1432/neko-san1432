@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 160" width="100%" height="160">
+  <defs>
+    <!-- Glow effects -->
+    <filter id="neon-glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="neon-glow-pink" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    <![CDATA[
+    .grid-border {
+      fill: #1a1b26;
+      stroke: #3b4261;
+      stroke-width: 2;
+    }
+
+    .slot-border {
+      fill: #1f2335;
+      stroke: #24283b;
+      stroke-width: 2;
+    }
+
+    .label-title {
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      fill: #ff007f;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .tech-label {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      fill: #c0caf5;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+
+    .tech-class {
+      font-family: 'Courier New', monospace;
+      font-size: 9px;
+      fill: #7aa2f7;
+      text-anchor: middle;
+    }
+
+    /* Staggered bobbing for items */
+    @keyframes item-bob {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .bob-0 { animation: item-bob 2.0s ease-in-out infinite; }
+    .bob-1 { animation: item-bob 2.0s ease-in-out infinite; animation-delay: 0.2s; }
+    .bob-2 { animation: item-bob 2.0s ease-in-out infinite; animation-delay: 0.4s; }
+    .bob-3 { animation: item-bob 2.0s ease-in-out infinite; animation-delay: 0.6s; }
+    .bob-4 { animation: item-bob 2.0s ease-in-out infinite; animation-delay: 0.8s; }
+    ]]>
+  </style>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+  <rect x="10" y="10" width="780" height="140" rx="8" class="grid-border" />
+
+  <!-- Header Title -->
+  <text x="400" y="30" text-anchor="middle" class="label-title" filter="url(#neon-glow-pink)">FORGED TECH STACK</text>
+
+  <!-- ================= ITEM SLOTS (X centers: 120, 260, 400, 540, 680) ================= -->
+  
+  <!-- Java (Slot 1: X=120) -->
+  <g transform="translate(120, 0)">
+    <rect x="-35" y="45" width="70" height="70" rx="6" class="slot-border" />
+    <g class="bob-0" transform="translate(0, 48)">
+      <!-- 8-Bit Coffee Cup Icon (Java) -->
+      <g transform="translate(-15, 5) scale(2)" shape-rendering="crispEdges">
+        <!-- Steam -->
+        <rect x="5" y="0" width="1" height="2" fill="#ff9e64" />
+        <rect x="9" y="0" width="1" height="2" fill="#ff9e64" />
+        <!-- Cup -->
+        <rect x="3" y="3" width="9" height="6" fill="#f75c7f" />
+        <rect x="2" y="3" width="1" height="5" fill="#f75c7f" />
+        <!-- Handle -->
+        <rect x="12" y="4" width="2" height="3" fill="#fafafa" />
+        <rect x="13" y="5" width="1" height="1" fill="#1f2335" />
+        <!-- Plate -->
+        <rect x="1" y="9" width="13" height="1" fill="#fafafa" />
+      </g>
+      <text x="0" y="85" class="tech-label">JAVA</text>
+      <text x="0" y="95" class="tech-class">SYSTEMS</text>
+    </g>
+  </g>
+
+  <!-- Python (Slot 2: X=260) -->
+  <g transform="translate(260, 0)">
+    <rect x="-35" y="45" width="70" height="70" rx="6" class="slot-border" />
+    <g class="bob-1" transform="translate(0, 48)">
+      <!-- 8-Bit Snakes Icon (Python) -->
+      <g transform="translate(-15, 5) scale(2)" shape-rendering="crispEdges">
+        <!-- Blue Snake -->
+        <rect x="2" y="1" width="6" height="3" fill="#7aa2f7" />
+        <rect x="5" y="4" width="6" height="3" fill="#7aa2f7" />
+        <!-- Yellow Snake -->
+        <rect x="7" y="5" width="6" height="3" fill="#e0af68" />
+        <rect x="4" y="2" width="6" height="3" fill="#e0af68" />
+        <!-- Eyes -->
+        <rect x="3" y="2" width="1" height="1" fill="#1a1b26" />
+        <rect x="11" y="6" width="1" height="1" fill="#1a1b26" />
+      </g>
+      <text x="0" y="85" class="tech-label">PYTHON</text>
+      <text x="0" y="95" class="tech-class">AUTOMATION</text>
+    </g>
+  </g>
+
+  <!-- JavaScript (Slot 3: X=400) -->
+  <g transform="translate(400, 0)">
+    <rect x="-35" y="45" width="70" height="70" rx="6" class="slot-border" />
+    <g class="bob-2" transform="translate(0, 48)">
+      <!-- 8-Bit JS Logo (JavaScript) -->
+      <g transform="translate(-15, 5) scale(2)" shape-rendering="crispEdges">
+        <!-- Background box -->
+        <rect x="1" y="1" width="13" height="10" fill="#e0af68" />
+        <!-- J -->
+        <rect x="4" y="7" width="3" height="1" fill="#1a1b26" />
+        <rect x="6" y="4" width="1" height="3" fill="#1a1b26" />
+        <!-- S -->
+        <rect x="8" y="4" width="3" height="1" fill="#1a1b26" />
+        <rect x="8" y="5" width="1" height="1" fill="#1a1b26" />
+        <rect x="9" y="6" width="2" height="1" fill="#1a1b26" />
+        <rect x="10" y="7" width="1" height="1" fill="#1a1b26" />
+        <rect x="8" y="8" width="3" height="1" fill="#1a1b26" />
+      </g>
+      <text x="0" y="85" class="tech-label">JS / TS</text>
+      <text x="0" y="95" class="tech-class">FRONTEND</text>
+    </g>
+  </g>
+
+  <!-- C++ (Slot 4: X=540) -->
+  <g transform="translate(540, 0)">
+    <rect x="-35" y="45" width="70" height="70" rx="6" class="slot-border" />
+    <g class="bob-3" transform="translate(0, 48)">
+      <!-- 8-Bit Shield Icon (C++) -->
+      <g transform="translate(-15, 5) scale(2)" shape-rendering="crispEdges">
+        <!-- Shield Body -->
+        <rect x="1" y="1" width="13" height="7" fill="#7aa2f7" />
+        <path d="M1,8 h13 v1 h-1 v1 h-1 v1 h-1 v1 h-2 v-1 h-1 v-1 h-1 v-1 h-1 v-1 h-1 v-1 H1 z" fill="#7aa2f7" />
+        <!-- Outer border highlight -->
+        <rect x="2" y="2" width="11" height="1" fill="#b4f9f8" />
+        <!-- Inner C -->
+        <rect x="4" y="4" width="2" height="3" fill="#fafafa" />
+        <!-- Plus signs -->
+        <rect x="8" y="5" width="3" height="1" fill="#00f0ff" />
+        <rect x="9" y="4" width="1" height="3" fill="#00f0ff" />
+      </g>
+      <text x="0" y="85" class="tech-label">C / C++</text>
+      <text x="0" y="95" class="tech-class">HARDWARE</text>
+    </g>
+  </g>
+
+  <!-- Go (Slot 5: X=680) -->
+  <g transform="translate(680, 0)">
+    <rect x="-35" y="45" width="70" height="70" rx="6" class="slot-border" />
+    <g class="bob-4" transform="translate(0, 48)">
+      <!-- 8-Bit Gopher Face (Go) -->
+      <g transform="translate(-15, 5) scale(2)" shape-rendering="crispEdges">
+        <!-- Head -->
+        <rect x="2" y="2" width="11" height="8" fill="#b4f9f8" />
+        <!-- Hair/Cap -->
+        <rect x="4" y="1" width="7" height="1" fill="#e0af68" />
+        <!-- Eyes (goggles style) -->
+        <rect x="3" y="3" width="3" height="3" fill="#fafafa" />
+        <rect x="9" y="3" width="3" height="3" fill="#fafafa" />
+        <rect x="4" y="4" width="1" height="1" fill="#1a1b26" />
+        <rect x="10" y="4" width="1" height="1" fill="#1a1b26" />
+        <!-- Nose -->
+        <rect x="7" y="6" width="1" height="1" fill="#ff9e64" />
+        <!-- Teeth -->
+        <rect x="6" y="8" width="3" height="1" fill="#fafafa" />
+      </g>
+      <text x="0" y="85" class="tech-label">GOLANG</text>
+      <text x="0" y="95" class="tech-class">MICROSERVICES</text>
+    </g>
+  </g>
+</svg>

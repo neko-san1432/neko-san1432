@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%" height="280">
+  <defs>
+    <!-- Glow effects -->
+    <filter id="neon-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    <![CDATA[
+    .terminal-window {
+      fill: #1a1b26;
+      stroke: #3b4261;
+      stroke-width: 2;
+    }
+
+    .terminal-header {
+      fill: #1f2335;
+    }
+
+    .text-cmd {
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      fill: #9ece6a;
+      font-weight: bold;
+    }
+
+    .text-cmd-prompt {
+      fill: #f75c7f;
+    }
+
+    .text-cmd-arg {
+      fill: #c0caf5;
+    }
+
+    .text-info {
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      fill: #c0caf5;
+    }
+
+    .text-label {
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      fill: #7aa2f7;
+      font-weight: bold;
+    }
+
+    .dot-red { fill: #f7768e; }
+    .dot-yellow { fill: #e0af68; }
+    .dot-green { fill: #9ece6a; }
+
+    /* Cursor blink */
+    @keyframes cursor-blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .cursor {
+      animation: cursor-blink 1s steps(2) infinite;
+      fill: #00f0ff;
+    }
+
+    /* Staggered text typing animation simulation */
+    @keyframes type-fade {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .line-1 { animation: type-fade 0.5s steps(1) forwards; }
+    .line-2 { animation: type-fade 0.5s steps(1) 0.5s forwards; opacity: 0; }
+    .line-3 { animation: type-fade 0.5s steps(1) 1s forwards; opacity: 0; }
+    .line-4 { animation: type-fade 0.5s steps(1) 1.5s forwards; opacity: 0; }
+
+    /* RPG skill progress glow */
+    .bar-fill {
+      fill: #00f0ff;
+      filter: drop-shadow(0px 0px 3px #00f0ff);
+    }
+    ]]>
+  </style>
+
+  <!-- ================= TERMINAL WINDOW CONTAINER ================= -->
+  <!-- Outer window border and body -->
+  <rect x="10" y="10" width="780" height="260" rx="8" class="terminal-window" />
+  
+  <!-- Header title bar -->
+  <path d="M10,18 C10,13.5 13.5,10 18,10 H782 C786.5,10 790,13.5 790,18 V38 H10 Z" class="terminal-header" />
+  
+  <!-- MacOS style window dots -->
+  <circle cx="30" cy="24" r="6" class="dot-red" />
+  <circle cx="50" cy="24" r="6" class="dot-yellow" />
+  <circle cx="70" cy="24" r="6" class="dot-green" />
+  
+  <!-- Header Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#565f89" font-weight="bold">neko-san@system: ~</text>
+
+  <!-- ================= LEFT COLUMN: CYBERPUNK TERMINAL ================= -->
+  <g transform="translate(35, 70)">
+    <!-- Command Prompts -->
+    <text x="0" y="0" class="text-cmd">
+      <tspan class="text-cmd-prompt">neko-san:~$</tspan> <tspan class="text-cmd-arg">neofetch</tspan>
+    </text>
+    
+    <!-- ASCII Art (8-bit Cat) -->
+    <g transform="translate(10, 20)" fill="#7aa2f7" font-family="monospace" font-size="14" font-weight="bold">
+      <text x="0" y="15">   /\_/\   </text>
+      <text x="0" y="32">  ( >.< )  </text>
+      <text x="0" y="49">   &gt; ^ &lt;   </text>
+    </g>
+
+    <!-- System Info Details -->
+    <g transform="translate(125, 20)">
+      <g class="line-1">
+        <text x="0" y="15" class="text-label">OS: <tspan class="text-info" font-weight="normal">NekoOS v1.4.32</tspan></text>
+      </g>
+      <g class="line-2">
+        <text x="0" y="35" class="text-label">KERNEL: <tspan class="text-info" font-weight="normal">TypeScript / Node.js</tspan></text>
+      </g>
+      <g class="line-3">
+        <text x="0" y="55" class="text-label">UPTIME: <tspan class="text-info" font-weight="normal">Active 24/7 (Actions)</tspan></text>
+      </g>
+      <g class="line-4">
+        <text x="0" y="75" class="text-label">LAST SYNC: <tspan class="text-info" font-weight="normal">Jun 14, 2026 21:02 UTC</tspan></text>
+      </g>
+    </g>
+
+    <!-- Output Prompt with Blinking Cursor -->
+    <text x="0" y="150" class="text-cmd">
+      <tspan class="text-cmd-prompt">neko-san:~$</tspan> <rect x="95" y="-12" width="8" height="15" class="cursor" />
+    </text>
+  </g>
+
+  <!-- ================= VERTICAL DIVIDER ================= -->
+  <line x1="430" y1="55" x2="430" y2="245" stroke="#3b4261" stroke-width="2" stroke-dasharray="4 4" opacity="0.5" />
+
+  <!-- ================= RIGHT COLUMN: RETRO RPG SKILL METER ================= -->
+  <g transform="translate(465, 70)">
+    <!-- Header -->
+    <text x="0" y="0" font-family="'Courier New', monospace" font-size="14" fill="#ff007f" font-weight="bold" filter="url(#neon-glow)">PLAYER SKILL STATS</text>
+    
+    <!-- Java -->
+    <g transform="translate(0, 25)">
+      <text x="0" y="12" class="text-label" font-size="11">JAVA [HP]</text>
+      <text x="100" y="12" font-family="monospace" font-size="12" class="bar-fill">██████████████░░░░ <tspan fill="#c0caf5">78%</tspan></text>
+    </g>
+    
+    <!-- Python -->
+    <g transform="translate(0, 50)">
+      <text x="0" y="12" class="text-label" font-size="11">PYTHON [MP]</text>
+      <text x="100" y="12" font-family="monospace" font-size="12" class="bar-fill">████████████░░░░░░ <tspan fill="#c0caf5">65%</tspan></text>
+    </g>
+    
+    <!-- JavaScript -->
+    <g transform="translate(0, 75)">
+      <text x="0" y="12" class="text-label" font-size="11">JS [AP]</text>
+      <text x="100" y="12" font-family="monospace" font-size="12" class="bar-fill">███████████████░░░ <tspan fill="#c0caf5">82%</tspan></text>
+    </g>
+    
+    <!-- C++ -->
+    <g transform="translate(0, 100)">
+      <text x="0" y="12" class="text-label" font-size="11">C++ [SP]</text>
+      <text x="100" y="12" font-family="monospace" font-size="12" class="bar-fill">██████████░░░░░░░░ <tspan fill="#c0caf5">50%</tspan></text>
+    </g>
+    
+    <!-- Go -->
+    <g transform="translate(0, 125)">
+      <text x="0" y="12" class="text-label" font-size="11">GO [GP]</text>
+      <text x="100" y="12" font-family="monospace" font-size="12" class="bar-fill">████████░░░░░░░░░░ <tspan fill="#c0caf5">40%</tspan></text>
+    </g>
+  </g>
+</svg>

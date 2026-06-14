@@ -33,17 +33,47 @@ async function fetchProgrammingJoke(): Promise<string> {
   }
 }
 
-async function updateReadme() {
+async function updateReadmeAndTerminal() {
   const joke = await fetchProgrammingJoke();
-  const dateStr = new Date().toUTCString();
+  const now = new Date();
+  
+  // Format dynamic dates
+  const dateStrUTC = now.toUTCString();
+  const dateStrShort = now.toLocaleDateString('en-US', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric'
+  }) + ' ' + now.toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  }) + ' UTC';
 
+  // 1. Generate terminal.svg from template
+  try {
+    const templatePath = path.join(process.cwd(), 'src', 'terminal.template.svg');
+    const outputPath = path.join(process.cwd(), 'terminal.svg');
+    
+    if (fs.existsSync(templatePath)) {
+      let templateContent = fs.readFileSync(templatePath, 'utf8');
+      const updatedTemplate = templateContent.replace('{LAST_SYNC}', dateStrShort);
+      fs.writeFileSync(outputPath, updatedTemplate, 'utf8');
+      console.log('terminal.svg generated successfully!');
+    } else {
+      console.error('Terminal template SVG not found!');
+    }
+  } catch (err) {
+    console.error('Failed to generate terminal.svg:', err);
+  }
+
+  // 2. Update README.md (Quote and text sync info)
   const dynamicContent = `
 ### 💡 Daily Tech Byte
 > ${joke.replace(/\n/g, '\n> ')}
 
-### 🕒 Profile Updates
-- **Last Sync:** \`${dateStr}\`
-- **Current Mission:** ⚒️ Forging clean code and blacksmithing digital solutions...
+### 🕒 System Synchronized
+- **Uptime:** Active 24/7 (via Actions)
+- **Time:** \`${dateStrUTC}\`
 `;
 
   const readmePath = path.join(process.cwd(), 'README.md');
@@ -71,7 +101,7 @@ async function updateReadme() {
   console.log('README.md updated successfully!');
 }
 
-updateReadme().catch((err) => {
-  console.error('Failed to update README:', err);
+updateReadmeAndTerminal().catch((err) => {
+  console.error('Failed to run updates:', err);
   process.exit(1);
 });
