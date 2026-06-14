@@ -88,6 +88,25 @@
     .cat-ascii-frame2 {
       animation: ascii-idle-f2 4s steps(1) infinite;
     }
+
+    /* Intro Open animation */
+    @keyframes panel-open {
+      0% { transform: scaleX(0.01); opacity: 0.8; }
+      100% { transform: scaleX(1); opacity: 1; }
+    }
+    .terminal-window, .terminal-header {
+      transform-origin: 400px 195px;
+      animation: panel-open 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes content-reveal {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    .panel-content {
+      animation: content-reveal 0.4s ease-out 0.6s forwards;
+      opacity: 0;
+    }
     ]]>
   </style>
 
@@ -99,15 +118,16 @@
   <path d="M10,18 C10,13.5 13.5,10 18,10 H782 C786.5,10 790,13.5 790,18 V38 H10 Z" class="terminal-header" />
   
   <!-- MacOS style window dots -->
-  <circle cx="30" cy="24" r="6" class="dot-red" />
-  <circle cx="50" cy="24" r="6" class="dot-yellow" />
-  <circle cx="70" cy="24" r="6" class="dot-green" />
-  
-  <!-- Header Title -->
-  <text x="400" y="28" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#565f89" font-weight="bold">neko-san@system: ~</text>
+  <g class="panel-content">
+    <circle cx="30" cy="24" r="6" class="dot-red" />
+    <circle cx="50" cy="24" r="6" class="dot-yellow" />
+    <circle cx="70" cy="24" r="6" class="dot-green" />
+    
+    <!-- Header Title -->
+    <text x="400" y="28" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#565f89" font-weight="bold">neko-san@system: ~</text>
 
-  <!-- ================= CYBERPUNK TERMINAL CONTENT ================= -->
-  <g transform="translate(35, 70)">
+    <!-- ================= CYBERPUNK TERMINAL CONTENT ================= -->
+    <g transform="translate(35, 70)">
     <!-- Command Prompt 1 -->
     <text x="0" y="0" class="text-cmd line-1">
       <tspan class="text-cmd-prompt">neko-san:~$</tspan> <tspan class="text-cmd-arg">neofetch</tspan>
@@ -160,5 +180,6 @@
     <text x="0" y="285" class="text-cmd line-5">
       <tspan class="text-cmd-prompt">neko-san:~$</tspan> <rect x="95" y="-12" width="8" height="15" class="cursor" />
     </text>
+  </g>
   </g>
 </svg>
