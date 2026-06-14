@@ -11,50 +11,16 @@
   <style>
     <![CDATA[
     /* CSS Styles & Animations */
-    .ground-line {
-      stroke: #00f0ff;
-      stroke-width: 4;
-      stroke-dasharray: 16 8;
-      opacity: 0.6;
-      filter: drop-shadow(0px 0px 4px #00f0ff);
-      animation: scroll-ground 0.8s linear infinite;
-    }
-
-    @keyframes scroll-ground {
-      0% { stroke-dashoffset: 0; }
-      100% { stroke-dashoffset: 24; }
-    }
-
-    /* 8-bit text wave animation with neon cyber glow */
+    /* 8-bit text jump animation with neon cyber glow */
     .pixel-letter {
       fill: url(#text-grad);
       filter: drop-shadow(0px 0px 8px rgba(0, 240, 255, 0.8)) drop-shadow(0px 0px 15px rgba(189, 0, 255, 0.5));
-      animation: letter-wave 1.6s ease-in-out infinite;
+      animation: letter-jump 1.2s steps(2) infinite;
     }
 
-    @keyframes letter-wave {
+    @keyframes letter-jump {
       0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
-
-    /* 8-bit walking translations (discrete pixel steps) */
-    @keyframes walk-in-left {
-      0% { transform: translate(-60px, 122px); }
-      70% { transform: translate(230px, 122px); }
-      100% { transform: translate(230px, 122px); }
-    }
-
-    @keyframes walk-in-right {
-      0% { transform: translate(810px, 122px); }
-      70% { transform: translate(525px, 122px); }
-      100% { transform: translate(525px, 122px); }
-    }
-
-    /* Wobble walking animation (discrete 8-bit steps) */
-    @keyframes walking-wobble {
-      0%, 10%, 20%, 30%, 40%, 50%, 60% { transform: translateY(0px) rotate(-4deg); }
-      5%, 15%, 25%, 35%, 45%, 55%, 65% { transform: translateY(-6px) rotate(4deg); }
-      70%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-6px); }
     }
 
     /* Continuous idle animations */
@@ -68,17 +34,13 @@
       50% { transform: translateY(-2px); }
     }
 
-    /* Animation class assignments */
+    /* Static layout positions with 8-bit idle animation overrides */
     .left-cat-container {
-      animation: walk-in-left 5s steps(28) forwards;
+      transform: translate(200px, 80px);
     }
 
     .right-cat-container {
-      animation: walk-in-right 5s steps(28) forwards;
-    }
-
-    .cat-wobble {
-      animation: walking-wobble 5s steps(14) forwards;
+      transform: translate(550px, 80px);
     }
 
     .cat-breath {
@@ -96,9 +58,6 @@
     }
     ]]>
   </style>
-
-  <!-- ================= MOVING NEON GROUND LINE ================= -->
-  <line x1="-50" y1="165" x2="850" y2="165" class="ground-line" />
 
   <!-- ================= 8-BIT TEXT WAVE (NEKO-SAN) ================= -->
   <g transform="translate(0, 85)" shape-rendering="crispEdges">
