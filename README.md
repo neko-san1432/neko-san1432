@@ -9,7 +9,7 @@
 ---
 
 <div align="center">
-  <img src="stack.svg" width="100%" alt="Forged Tech Stack" />
+  <img src="stack.svg?v=1" width="100%" alt="Forged Tech Stack" />
 </div>
 
 ---
