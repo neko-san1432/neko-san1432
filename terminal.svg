@@ -156,7 +156,7 @@
         <text x="0" y="15" class="text-label">OS: <tspan class="text-info" font-weight="normal">NekoOS v1.4.32</tspan></text>
         <text x="0" y="35" class="text-label">KERNEL: <tspan class="text-info" font-weight="normal">TypeScript / Node.js</tspan></text>
         <text x="0" y="55" class="text-label">UPTIME: <tspan class="text-info" font-weight="normal">Active 24/7 (Actions)</tspan></text>
-        <text x="0" y="75" class="text-label">LAST SYNC: <tspan class="text-info" font-weight="normal">Sep 7, 2026 10:52 UTC</tspan></text>
+        <text x="0" y="75" class="text-label">LAST SYNC: <tspan class="text-info" font-weight="normal">Sep 7, 2026 16:44 UTC</tspan></text>
       </g>
     </g>
 
